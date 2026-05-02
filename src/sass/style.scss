@@ -1,0 +1,139 @@
+@use "./globals/colors" as *;
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $background-color;
+    color: $text-color;
+    font-family: "Arial", sans-serif;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: $text-color;
+}
+
+.header {
+    background-color: $white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1rem 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &__img {
+        width: 100%;
+        height: auto;
+        max-width: 200px;
+    }
+    &__nav {
+        & li {
+            display: block;
+            width: 80px;
+            float: left;
+            & a {
+                color: $white;
+                background: url(../imgs/blue1.png) repeat-x bottom;
+                font-weight: bold;
+                display: block;
+                line-height: 1;
+                padding: 6px 0;
+                border-left: 1px solid $white;
+                text-align: center;
+                text-decoration: none;
+                &:hover {
+                    background: $btn-hover-color;
+                }
+            }
+        }
+        & #current {
+            & a {
+                background: url(../imgs/blue2.png) repeat-x bottom;
+                color: $current-color;
+            }
+        }
+    }
+}
+
+.main {
+    max-width: 1000px;
+    width: 100%;
+    margin: 40px auto;
+    padding: 2rem;
+    &__section {
+        background-color: $white;
+        border-radius: 12px;
+        padding: 2rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            color: $primary-color;
+            padding-bottom: 10px;
+            display: inline-block;
+            border-bottom: 3px solid $accent-color;
+        }
+        &-item {
+            margin-top: 2rem;
+            h3 {
+                font-size: 1.1rem;
+                font-weight: bold;
+                margin-bottom: 0.5rem;
+                color: $accent-color;
+            }
+            p {
+                background: #f1f5f9;
+                padding: 1rem;
+                border-radius: 8px;
+                border-left: 4px solid $accent-color;
+            }
+        }
+    }
+}
+
+.footer {
+    text-align: center;
+    padding: 3rem 1rem;
+    color: $text-color;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 1rem;
+        flex-direction: column;
+        gap: 1rem;
+
+        &__img {
+            max-width: 150px;
+        }
+
+        // &__nav {
+        //     &-list {
+        //         flex-wrap: wrap;
+        //         justify-content: center;
+        //         gap: 15px;
+        //     }
+        // }
+    }
+
+    .main {
+        margin: 20px auto;
+        padding: 1rem;
+
+        &__section {
+            padding: 1.5rem 1rem;
+
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
