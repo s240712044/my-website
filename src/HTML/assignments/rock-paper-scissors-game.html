@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <title>じゃんけんゲーム</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../../css/reset.css" />
+        <link rel="stylesheet" href="../../css/style.css" />
+    </head>
+    <body>
+        <div id="page" class="page">
+            <header id="header" class="header">
+                <a href="../../index.html">
+                    <img
+                        class="header__img"
+                        src="../../imgs/logo.png"
+                        alt="ロゴ画像"
+                    />
+                </a>
+                <nav class="header__nav">
+                    <ul class="header__nav-list">
+                        <li><a href="../../../index.html">ホーム</a></li>
+                        <li><a href="../../HTML/aboutMe.html">自己紹介</a></li>
+                        <li id="current">
+                            <a href="../../HTML/assignment.html">課題</a>
+                        </li>
+                        <li><a href="../../HTML/sonota.html">その他</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <main id="main" class="main">
+                <section class="main__section rock-paper-scissors-game">
+                    <div class="rock-paper-scissors-game__intro">
+                        <h2>じゃんけんゲーム</h2>
+                        <p>
+                            じゃんけんゲームへようこそ！コンピュータとじゃんけんをしましょう。グー、チョキ、パーのいずれかを選んでください。
+                        </p>
+                        <button id="startBtn" class="btn">ゲーム開始</button>
+                    </div>
+                    <div id="gameArea" class="rock-paper-scissors-game__gameArea" style="display: none">
+                        <p id="feedback"></p>
+                        <input type="radio" id="rock" name="choice" value="rock">
+                        <label for="rock">グー</label>
+                        <input type="radio" id="scissors" name="choice" value="scissors">
+                        <label for="scissors">チョキ</label>
+                        <input type="radio" id="paper" name="choice" value="paper">
+                        <label for="paper">パー</label>
+                        <button id="submitChoice" class="btn">選択を確定</button>
+                        <button id="endGame" class="btn">ゲームを終了</button>
+                    </div>
+                </section>
+            </main>
+
+            <footer id="footer" class="footer">
+                <p id="copyright" class="footer__copyright">
+                    <small>&copy; 2026 Koya Kudo</small>
+                </p>
+            </footer>
+        </div>
+
+        <script src="../../JS/rockPaperScissors.js"></script>
+    </body>
+</html>

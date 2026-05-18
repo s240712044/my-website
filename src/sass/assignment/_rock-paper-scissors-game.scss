@@ -1,0 +1,61 @@
+@use "../globals/colors" as *;
+
+.rock-paper-scissors-game {
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+
+    &__intro {
+        margin-bottom: 30px;
+        text-align: center;
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+        p {
+            font-size: 1.1rem;
+            color: $text-color;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+    }
+
+    &__gameArea {
+        margin-top: 20px;
+        padding: 30px 20px;
+        background-color: #f8f9fa;
+        border-radius: 8px;        
+        border: 1px solid #e9ecef;
+        text-align: center;
+
+        #feedback {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            min-height: 3em;
+            white-space: pre-wrap;
+        }
+
+        input[type="radio"] {
+            margin: 0 5px 0 15px;
+            transform: scale(1.2);
+            cursor: pointer;
+
+            &:first-of-type {
+                margin-left: 0;
+            }
+        }
+
+        label {
+            font-size: 1.2rem;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        #submitChoice,
+        #endGame {
+            margin-top: 25px;
+        }
+    }
+}
