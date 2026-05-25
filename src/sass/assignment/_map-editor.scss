@@ -1,0 +1,47 @@
+@use "../globals/colors" as *;
+
+.map-editor {
+    text-align: center;
+
+    &__intro {
+        margin-bottom: 2rem;
+    }
+
+    &__gameArea {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+}
+
+#board {
+    border-collapse: collapse;
+    margin: 0 auto;
+
+    td {
+        padding: 0;
+        margin: 0;
+        line-height: 0;
+    }
+}
+
+.map-img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    display: block;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+#endGame {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
