@@ -1,0 +1,28 @@
+@use "../globals/colors" as *;
+
+.drawing-app {
+    &__gameArea {
+        margin-top: 20px;
+        padding: 20px;
+        background-color: #f8f9fa;
+        border-radius: 8px;
+        border: 1px solid #e9ecef;
+        text-align: center;
+
+        #canvas {
+            display: block;
+            width: 100%;
+            max-width: 320px;
+            height: auto;
+            margin: 0 auto 20px;
+            background-color: $white;
+            border: 2px solid #dee2e6;
+            border-radius: 4px;
+            touch-action: none;
+        }
+
+        #endGame {
+            margin-top: 10px;
+        }
+    }
+}
