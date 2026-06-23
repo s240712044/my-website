@@ -108,6 +108,91 @@
   margin-top: 25px;
 }
 
+.map-editor {
+  text-align: center;
+}
+.map-editor__intro {
+  margin-bottom: 2rem;
+}
+.map-editor__gameArea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+#board {
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+#board td {
+  padding: 0;
+  margin: 0;
+  line-height: 0;
+}
+
+.map-img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  display: block;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+}
+.map-img:hover {
+  opacity: 0.8;
+}
+
+#endGame {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.drawing-app__gameArea {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+  text-align: center;
+}
+.drawing-app__gameArea #canvas {
+  display: block;
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  margin: 0 auto 20px;
+  background-color: #fff;
+  border: 2px solid #dee2e6;
+  border-radius: 4px;
+  touch-action: none;
+}
+.drawing-app__gameArea #endGame {
+  margin-top: 10px;
+}
+
+.dungeon-game__intro {
+  text-align: center;
+  padding: 2rem 0;
+}
+.dungeon-game__intro p {
+  margin-bottom: 1.5rem;
+}
+.dungeon-game__gameArea {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.dungeon-game__gameArea canvas {
+  display: block;
+  border: 4px solid #334155;
+  border-radius: 4px;
+  max-width: 100%;
+}
+
 .btn {
   margin-left: 10px;
   padding: 0.5rem 1rem;
@@ -261,4 +346,6 @@ a {
   .main__section h2 {
     font-size: 1.5rem;
   }
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */
